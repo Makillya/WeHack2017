@@ -79,23 +79,42 @@ class UserManager(models.Manager):
         # errorList - Keeps tracks of all errors with the validation.
         errorList = []
 
+        mail=userInput['check_email']
         # Checks if the email and password don't match.
-        if not userInput['email'] and not userInput['password']:
+        if not mail and not userInput['password']:
             errorList.append('Unsuccessful login. Please fill in the email and password field!\n')
             return False, errorList
-        # Check if user is in Mentor table
-        elif self.filter(email = userInput['email']) :
-            hashed = self.get(email = userInput['username_email']).password.encode()
-            password = userInput['password'].encode()
+        # Check if user is in User table
+        print "*************"
+        print mail
+        if self.filter(email = mail) :
+            hashed = self.get(email = mail).password.encode()
+            password = userInput['check_password'].encode()
             # Checks if the password is the correct one to the hashed one.
             if bcrypt.hashpw(password, hashed) == hashed:
-                return True, self.get(email=userInput['email'])
+                return True, self.get(email=mail)
 
             else:
                 errorList.append('Unsuccessful login. Incorrect password!\n')
         else:
             errorList.append('Unsuccessful login. Your email is incorrect!\n')
         return False, errorList
+
+    def addUserInfo(self, userInput, currentUserId):
+        errors=[]
+        if len(userInput["zipcode"]<6):
+            errors.append("Your zipcode has to be at least 5 digit")
+        if not errors:
+            this_user=self.get(id=currentUserId)
+            this_user["zipcode"]=userInput["zipcode"]
+            this_user["title"]=userInput["title"]
+            this_user["company"]=userInput["company"]
+            this_user["about"]=userInput["about"]
+            this_user.save()
+            return True, this_user
+        else:
+            return False, errors
+
 
 
 class RelationshipManager(models.Manager):
@@ -127,7 +146,7 @@ class User(models.Model):
                                             related_name="related_to+")
     objects = UserManager()
     def __unicode__(self):
-        return self.name
+        return self.first_name
 
 RELATIONSHIP_CONNECTED = 1
 RELATIONSHIP_STATUSES = (

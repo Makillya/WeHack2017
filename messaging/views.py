@@ -11,4 +11,12 @@ def addMessage(request,addresseeId):
     if request.method == "POST":
         creatorId=request.session["currentUser"]
         message=Message.objects.add(request.POST, creatorId, addresseeId)
-    return redirect(request, "messaging:index")
+        if not message[0]:
+            for i in range(0, len(message[1])):
+                messages.error(request, message[1][i])
+            return redirect('loginreg:index')
+        else:
+            request.session['currentUser'] = message[1].id
+            return redirect ('loginreg:success')
+
+            
