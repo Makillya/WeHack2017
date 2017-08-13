@@ -20,9 +20,9 @@ def search(request):
             return None
     data = search2(isMentor, byTitle, inputs)
     response = HttpResponse(data, content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename="result.csv"' 
+    response['Content-Disposition'] = 'attachment; filename="result.csv"'
     return response #return table by csv
-    
+
 def search2(isMentor, byTitle, inputs):
     if inputs == '':
         return showAll(isMentor)
@@ -36,7 +36,7 @@ def search2(isMentor, byTitle, inputs):
             return User.objects.filter(user_type='mentee').filter(zipcode=inputs).order_by('last_name')
         else:
             return User.objects.filter(user_type='mentor').filter(zipcode=inputs).order_by('last_name')
-        
+
 def showAll(isMentor):
     if isMentor:
         return User.objects.filter(user_type='mentee')
