@@ -51,7 +51,7 @@
             <!--Results-->
             {% for u in users %}
             <div class="results">
-                <h1 class="name"><a href="#" class="profile-link">{{u.first_name}} {{u.last_name}}</a></h1>
+                <h1 class="name"><a href="{% url 'loginreg:userProfile' u.id %}" class="profile-link">{{u.first_name}} {{u.last_name}}</a></h1>
                 <h1 class="position">{{u.title}}</h2>
                 <p class="about">{{u.about}}</p>
             </div>

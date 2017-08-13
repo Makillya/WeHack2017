@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^search$', views.search, name = "search"),
     url(r'^logout$', views.logout, name = "logout"),
     url(r'^addUserInfo$', views.addUserInfo, name = "addUserInfo"),
+    url(r'^userProfile/(?P<id>\d+)$', views.userProfile, name = "userProfile"),
 ]

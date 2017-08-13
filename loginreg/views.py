@@ -64,3 +64,10 @@ def addUserInfo(request):
         else:
             request.session['currentUser'] = user[1].id
             return redirect('loginreg:search')
+
+def userProfile(request, id):
+    context = {
+        "user" : User.objects.get(id=id)
+    }
+    return render(request, "loginreg/user_profile.html", context)
+
