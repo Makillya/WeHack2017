@@ -1,15 +1,111 @@
-<<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="$1">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Women in Tech</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="author" href="humans.txt">
-    </head>
-    <body>
-      <h1>Hello girls uuu! Hey pips</h1>
-        <script src="js/main.js"></script>
-    </body>
+  <head>
+    <meta charset="utf-8">
+    <title>We Hack 2017</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300|PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/loginreg/css/reset.css">
+    <link rel="stylesheet" href="../../static/loginreg/css/style.css">
+    <link rel="stylesheet" href="../../static/loginreg/css/home.css">
+  </head>
+  <body>
+            <!--Header section-->
+        <div id="header">
+            <!--logo image-->
+            <img src="../../static/loginreg/images/logo.png" class="logo">
+
+            <!--Navbar links-->
+            <div class="navbar">
+                <ul>
+                    <li><a href="#how-it-works">How it Works</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Top section-->
+        <div class="top-section">
+            <img src="../../static/loginreg/images/tech.jpg" class="photo">
+            <h1 class="tagline">The place to connect with woment in tech!</h1>
+
+            <!--Box with link to join popup-->
+            <a href="#" class="join-box">Join!
+                <p class="join-subtext">Get connected with other mentors or mentees!</p>
+            </a>
+
+        </div>
+
+        <!--How it works section-->
+        <div class="content-container" id="how-it-works">
+            <h1 class="title">How it Works</h1>
+            <p class="text-box">Text about how this website works and why you should use it. The main reason: it's awesome! But in cause that's not a good enough reason, we'll tell you more (eventually)</p>
+            <p class="text-box">Nunc pretium ipsum ut vulputate cursus. Integer sit amet odio lectus. Mauris maximus dui ut porta tincidunt. Integer sapien mi, iaculis non magna id, convallis pulvinar leo. Ut ac pretium justo, sed tristique massa. Morbi quis facilisis sapien, vitae tincidunt tortor. In eleifend maximus nunc, eget tristique lorem euismod sed.</p>
+        </div>
+
+        <img src="../../static/loginreg/images/divider.jpg" alt="divider image" class="divider-img">
+
+        <!--About Us section-->
+        <div class="content-container" id="about">
+            <h1 class="title">About Us</h1>
+            <p class="text-box">This is everything you ever wanted (and didn't want) to know about us and how we got started.</p>
+            <p class="text-box">Ut varius, eros eget malesuada tempus, sapien orci gravida velit, vitae ultricies quam dolor ut purus. Aliquam sollicitudin sit amet leo sit amet facilisis. Cras sed lacus in lorem bibendum rhoncus. Curabitur mattis leo lorem, vitae aliquam enim pellentesque sit amet. Sed eget mauris a nunc condimentum hendrerit non sed enim. Morbi nec nibh sed risus sodales maximus. Pellentesque eget magna semper, cursus ante sit amet, ultrices augue. Nunc consequat libero sed molestie rhoncus.</p>
+        </div>
+
+        <!--Footer links-->
+        <div id="footer">
+            <ul>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+    <!-- This is the signup login modal -->
+    <div id="login-signup">
+
+      <div id="modal__tab-container">
+        <!-- Form Tabs Start-->
+        <div class="modal__tab tab--active" data-tab="" id="modal__left">
+          Log In
+        </div>
+
+        <div class="modal__tab" data-tab="" id="modal__right">
+          Sign Up
+        </div>
+      </div>
+      <!-- Form Tabs End -->
+
+      <!-- Sign Up Form Starts-->
+      <div class="signup-form__container">
+        <form class="" action="index.html" method="post">
+          <fieldset>
+            <input class="input-box" type="text" name="first" placeholder="First" value="">
+            <input class="input-box" type="text" name="last" placeholder="Last" value="">
+            <input class="input-box" type="text" name="email" placeholder="Email" value="">
+            <input class="input-box" type="text" name="password" placeholder="Password" value="">
+            <h2>Who Are You?</h2>
+            <p><input type="radio" name="user_type" value="mentor">I am a Mentor</p><br>
+            <p><input type="radio" name="user_type" value="mentee">I am a Mentee</p>
+            <button type="button" name="button">Sign Up</button>
+          </fieldset>
+        </form>
+      </div>
+      <!-- Sign Up Form Ends -->
+
+      <!-- Log In Form Starts -->
+      <div class="login-form__container">
+        <form class="" action="index.html" method="post">
+          <fieldset>
+            <input class="input-box" type="text" name="email" placeholder="Email" value="">
+            <input class="input-box" type="text" name="password" placeholder="Password" value="">
+            <button class="input-box" type="button" name="button">Login</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <!-- Log In Form Ends -->
+
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="../../static/loginreg/js/app.js"></script>
 </html>
