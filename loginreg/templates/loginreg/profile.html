@@ -25,13 +25,19 @@
         </div>
         <main>
           <div class="user-profile-form">
+            {% if messages %}
+                {% for message in messages %}
+                  {{ message|linebreaksbr }}
+                {% endfor %}
+            {% endif %}
             <img id="user-profile-img" src="" alt="User Profile Image">
-            <form class="user-profile" action="" method="post">
-                <input class="input-box" type="text" name="zipcode" placeholder="Zipcode" value="">
-                <input class="input-box" type="text" name="title" placeholder="Title i.e. Full-Stack Dev or Student" value="">
-                <input class="input-box" type="text" name="company" placeholder="Company or School" value="">
+            <form class="user-profile" action="{% url 'loginreg:addUserInfo' %}" method="post">
+              {% csrf_token %}
+                <input class="input-box" type="text" name="zipcode" placeholder="Zipcode" >
+                <input class="input-box" type="text" name="title" placeholder="Title i.e. Full-Stack Dev or Student" >
+                <input class="input-box" type="text" name="company" placeholder="Company or School" >
                 <textarea name="about" maxlength="500"rows="8" cols="60" placeholder="Tell us about yourself. What makes you unique? What are your interest?"></textarea>
-                <button id="save-profile" type="button" name="save-profile">Save</button>
+                <button id="save-profile" type="submit" name="save-profile">Save</button>
             </form>
           </div>
         </main>

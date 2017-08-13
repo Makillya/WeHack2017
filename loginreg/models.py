@@ -78,13 +78,13 @@ class UserManager(models.Manager):
     def login(self, userInput):
         # errorList - Keeps tracks of all errors with the validation.
         errorList = []
-        #
-        # # Checks if the email and password don't match.
-        # if not userInput['email'] and not userInput['password']:
-        #     errorList.append('Unsuccessful login. Please fill in the email and password field!\n')
-        #     return False, errorList
-        # Check if user is in User table
+
         mail=userInput['check_email']
+        # Checks if the email and password don't match.
+        if not mail and not userInput['password']:
+            errorList.append('Unsuccessful login. Please fill in the email and password field!\n')
+            return False, errorList
+        # Check if user is in User table
         print "*************"
         print mail
         if self.filter(email = mail) :
@@ -99,6 +99,22 @@ class UserManager(models.Manager):
         else:
             errorList.append('Unsuccessful login. Your email is incorrect!\n')
         return False, errorList
+
+    def addUserInfo(self, userInput, currentUserId):
+        errors=[]
+        if len(userInput["zipcode"]<6):
+            errors.append("Your zipcode has to be at least 5 digit")
+        if not errors:
+            this_user=self.get(id=currentUserId)
+            this_user["zipcode"]=userInput["zipcode"]
+            this_user["title"]=userInput["title"]
+            this_user["company"]=userInput["company"]
+            this_user["about"]=userInput["about"]
+            this_user.save()
+            return True, this_user
+        else:
+            return False, errors
+
 
 
 class RelationshipManager(models.Manager):
