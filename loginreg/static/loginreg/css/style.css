@@ -453,3 +453,6 @@ textarea {
 .email {
   font-size: 20px;
 }
+.error{
+  color:darkred;
+}

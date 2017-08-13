@@ -31,11 +31,13 @@
 
             <!--Box with link to join popup-->
             <a href="#" class="join-box">Join!
-              {% if messages %}
-              {% for message in messages %}
-              {{ message|linebreaksbr }}
-              {% endfor %}
-              {% endif %}
+              <div class="error">
+                {% if messages %}
+                {% for message in messages %}
+                {{ message|linebreaksbr }}
+                {% endfor %}
+                {% endif %}
+              </div>
                 <p class="join-subtext">Get connected with other mentors or mentees!</p>
             </a>
 
