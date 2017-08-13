@@ -31,10 +31,8 @@ h2 {
 #login-signup {
   width: 500px;
   height: 700px;
-  /*Remove these two below after styling completed:*/
-  margin-left: 100px;
-  margin-top: 80px;
   border: 1px solid #d0d0d0;
+  background: #fff;
 }
 
 #modal__tab-container {
@@ -76,6 +74,20 @@ input.input-box {
 .login-form__container {
   margin: 10px;
 }
+
+.wrapper {
+  z-index: 10000;
+  position: fixed;
+  left: 32%;
+  top: 80px;
+  overflow: auto;
+}
+
+.wrapper-body {
+  background-color: rgba(0,0,0,0.6)
+}
+
+
 
 
 /*This is the class for the active tab for login and signup*/
