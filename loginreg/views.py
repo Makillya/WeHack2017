@@ -42,7 +42,6 @@ def logout(request):
     return redirect('loginreg:index')
 
 def profile(request):
-
     return render(request, 'loginreg/profile.html')
 
 def search(request):
