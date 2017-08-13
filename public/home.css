@@ -1,13 +1,20 @@
-
+a {
+    Font-Family: 'Nunito', Sans-Serif;
+}
 a:link {
     text-decoration: none;
     color: grey;
+}
+
+div {
+    Font-Family: 'Nunito', Sans-Serif;
 }
 
 .title {
     text-align: center;
     font-size: 35px;
     margin-top: 15px;
+    Font-Family: 'Nunito', Sans-Serif;
 }
 
 .text-box {
@@ -64,6 +71,7 @@ li {
 }
 
 .tagline {
+    Font-Family: 'Nunito', Sans-Serif;
     text-align: center;
     font-size: 45px;
     padding-top: 60px;
