@@ -21,8 +21,8 @@ def chatHist(request):#, rec):
         rec = userInput["addressee"]
     if currentID == None or rec == None:
         return None
-    data = (Message.objects.filter(creator.id=currentID).filter(addressee.id=rec) | Message.objects.filter(creator.id=rec).filter(addressee.id=currentID)).sort_by('created_at')
-    #return data
-    response = HttpResponse(data, content_type='text/csv')
+    db = (Message.objects.filter(creator.id=currentID).filter(addressee.id=rec) | Message.objects.filter(creator.id=rec).filter(addressee.id=currentID)).sort_by('created_at')
+    #return db
+    response = HttpResponse(db, content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="result.csv"' 
     return response
