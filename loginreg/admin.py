@@ -3,9 +3,7 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 
-from .models import Mentor, Mentee
+from .models import User
 
-admin.site.register(Mentor)
-admin.site.register(Mentee)
+admin.site.register(User)
 
-# Register your models here.
