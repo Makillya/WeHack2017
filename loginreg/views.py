@@ -44,10 +44,6 @@ def logout(request):
 def profile(request):
     return render(request, 'loginreg/profile.html')
 
-<<<<<<< HEAD
-def search(request):
-    return render(request, 'loginreg/search.html')
-=======
 def addUserInfo(request):
     print "****addUserInfo******"
     if request.method == 'POST':
@@ -61,4 +57,3 @@ def addUserInfo(request):
         else:
             request.session['currentUser'] = user[1].id
             return redirect('loginreg:profile')
->>>>>>> added addUserInfo function
