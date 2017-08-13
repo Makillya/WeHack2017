@@ -44,6 +44,9 @@ def logout(request):
 def profile(request):
     return render(request, 'loginreg/profile.html')
 
+def search(request):
+    return render(request, "loginreg/search.html")
+
 def addUserInfo(request):
     print "****addUserInfo******"
     if request.method == 'POST':
