@@ -32,7 +32,7 @@ def login(request):
         return redirect('loginreg:index')
     else:
         request.session['currentUser'] = user[1].id
-        return redirect ('loginreg:profile')
+        return redirect ('loginreg:search')
 
 
 # Logout function
@@ -59,4 +59,4 @@ def addUserInfo(request):
             return redirect ('loginreg:profile')
         else:
             request.session['currentUser'] = user[1].id
-            return redirect('loginreg:profile')
+            return redirect('loginreg:search')
