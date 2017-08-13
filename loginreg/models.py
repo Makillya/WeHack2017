@@ -30,7 +30,7 @@ DATE_REGEX = re.compile(r'^[0-9]{4}-[0-9]{2}-[0-9]{2}$')
 class UserManager(models.Manager):
     # Call this function to check for validation of all field for registation.
     # How to call: Table.userManager.registration(request.POST)
-    def registerMentor(self, userInput):
+    def register(self, userInput):
         # errorList - Keeps tracks of all errors with the validation.
         errorList = []
 
