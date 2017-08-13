@@ -416,3 +416,40 @@ textarea {
 }
 
 /* ---------- End Search Page ---------- */
+
+
+/* ---------- User Profile Page ---------- */
+
+
+
+.profile-container {
+  margin-left: 25%;
+  width: 50%;
+  background-color: #DEFAFC;
+  margin-right: 20px;
+  outline: double 3px #2D2A2D;
+  outline-offset: -15px;
+  text-align: center;
+  padding-bottom: 35px;
+}
+
+.name {
+  padding-top: 35px;
+
+}
+
+.position {
+  font-size: 25px;
+}
+
+.location {
+  font-size: 25px;
+}
+
+.about {
+  font-size: 20px;
+}
+
+.email {
+  font-size: 20px;
+}
