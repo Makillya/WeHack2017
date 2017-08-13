@@ -263,7 +263,7 @@ li {
 /* Footer Section -----------------*/
 #footer {
   width: 100%;
-  position: absolute;
+  /*position: absolute;*/
   bottom: 0;
   color: #ffffff;
   background-color: #2D2A2D;
