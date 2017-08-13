@@ -3,6 +3,20 @@ fieldset {
   padding: 40px 30px 50px;
 }
 
+a {
+  Font-Family: 'Nunito', Sans-Serif;
+  color: black;
+}
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
 button {
   cursor:pointer;
   max-width: 50%;
@@ -61,6 +75,7 @@ h2 {
 }
 
 input.input-box {
+  outline: none;
   font-size: 20px;
   height: 40px;
   line-height: 24px;
@@ -100,6 +115,36 @@ input.input-box {
   padding-top: 13px;
 }
 
+/*User Profile*/
+
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  font-size: 20px;
+  align-self: center;
+  width: 30%;
+  outline: none;
+  border: 1px solid #d0d0d0;
+  resize: none;
+  margin-top: 35px;
+  margin-left: 10px;
+}
+
+#save-profile {
+  align-self: center;
+  height: 50px;
+  width: 15%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 0;
+}
+
+/*----User Profile End---*/
+
 
 /* ---------- Search Page ---------- */
 
@@ -108,7 +153,7 @@ input.input-box {
   margin: 40px 0px 0px 40px;
 }
 
-/* ---- Sidebar ____ */
+      /* ---- Sidebar ____ */
 #sidebar-container {
   width: 25%;
   background-color: #dddddd;
@@ -144,7 +189,7 @@ input.input-box {
 }
 
 
-/* ---- Right Body ---- */
+    /* ---- Right Body ---- */
 
 #right-container {
   display: block;
@@ -201,3 +246,4 @@ input.input-box {
 }
 
 /* ---------- End Search Page ---------- */
+
