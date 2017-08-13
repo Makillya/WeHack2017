@@ -19,6 +19,7 @@ button {
 }
 
 p {
+  Font-Family: 'PT Sans', Sans-Serif;
   font-size: 20px;
 }
 
@@ -26,6 +27,7 @@ h2 {
   font-size: 30px;
   margin-top: 30px;
   margin-bottom: 20px;
+  Font-Family: 'Nunito', Sans-Serif;
 }
 
 #login-signup {
