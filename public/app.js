@@ -1,8 +1,24 @@
 'use strict';
 
-$(document).ready(function(){
+//Hide modal when index page loads
+function hideModal(){
+  $('#login-signup').hide();
+};
+
+//Display modal when join is clicked
+function displayModal(){
+  $('.join-box').on('click', function(){
+    $('#login-signup').show();
+    $('#login-signup').addClass('wrapper');
+    $('body').addClass('wrapper-body');
+    $('#footer, #header .content-container, .top-section').addClass('wrapper-body');
+  });
+};
+
+//This needs to go somewhere else in a function for when it shows.
+function defautState(){
   $('.signup-form__container').hide();
-});
+}
 
 function signUpState(){
   $('#modal__right').on('click', function() {
@@ -22,5 +38,8 @@ function loginState(){
   });
 };
 
+hideModal();
+displayModal();
+defautState();
 signUpState();
 loginState();
