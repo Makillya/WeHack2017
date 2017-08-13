@@ -22,7 +22,6 @@ def register(request):
                 return redirect('loginreg:profile')
 
 
-
 # Login function
 def login(request):
     user = User.UserManager.login(request.POST)

@@ -1,0 +1,249 @@
+
+fieldset {
+  padding: 40px 30px 50px;
+}
+
+a {
+  Font-Family: 'Nunito', Sans-Serif;
+  color: black;
+}
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor:pointer;
+  max-width: 50%;
+	width: 100%;
+	border:none;
+	background: #ff5252;
+	color: #FFF;
+	margin: 0 0 5px;
+	padding: 10px;
+	font-size: 15px;
+  margin-left: 25%;
+  margin-top: 10%;
+  border-radius: 10px;
+}
+
+p {
+  Font-Family: 'PT Sans', Sans-Serif;
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  Font-Family: 'Nunito', Sans-Serif;
+}
+
+#login-signup {
+  width: 500px;
+  height: 700px;
+  border: 1px solid #d0d0d0;
+  background: #fff;
+}
+
+#modal__tab-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#modal__left {
+  border-right: 1px solid #d0d0d0;
+}
+
+.modal__tab {
+  background-color: #f7f7f7;
+  border-top: 1px solid #d0d0d0;
+  border-bottom: 1px solid #d0d0d0;
+  color: #333;
+  font-size: 26px;
+  font-weight: 600;
+  height: 60px;
+  line-height: 29px;
+  padding-top: 15px;
+  width: 250px;
+  text-align: center;
+}
+
+input.input-box {
+  outline: none;
+  font-size: 20px;
+  height: 40px;
+  line-height: 24px;
+  margin: 8px auto 0;
+  padding: 8px 18px;
+  width: 380px;
+}
+
+.signup-form__container {
+  margin: 10px;
+}
+
+.login-form__container {
+  margin: 10px;
+}
+
+.wrapper {
+  z-index: 10000;
+  position: fixed;
+  left: 32%;
+  top: 80px;
+  overflow: auto;
+}
+
+.wrapper-body {
+  background-color: rgba(0,0,0,0.6)
+}
+
+
+
+
+/*This is the class for the active tab for login and signup*/
+.tab--active {
+  background-color: #fff;
+  border-top: 3px solid #ff5252;
+  border-bottom: 0;
+  padding-top: 13px;
+}
+
+/*User Profile*/
+
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  font-size: 20px;
+  align-self: center;
+  width: 30%;
+  outline: none;
+  border: 1px solid #d0d0d0;
+  resize: none;
+  margin-top: 35px;
+  margin-left: 10px;
+}
+
+#save-profile {
+  align-self: center;
+  height: 50px;
+  width: 15%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 0;
+}
+
+/*----User Profile End---*/
+
+
+/* ---------- Search Page ---------- */
+
+#container {
+  display: flex;
+  margin: 40px 0px 0px 40px;
+}
+
+      /* ---- Sidebar ____ */
+#sidebar-container {
+  width: 25%;
+  background-color: #dddddd;
+  margin-right: 20px;
+  outline: double 3px lightgrey;
+  outline-offset: -15px;
+}
+
+.sidebar-title {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.filter-list {
+  width: 50%;
+  margin-left: 5%;
+}
+
+.filter-type {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.filter-type .filter-link {
+  color: black;
+  margin-left: 10px;
+}
+
+.filter-type .filter-link:hover {
+  color: grey;
+}
+
+
+    /* ---- Right Body ---- */
+
+#right-container {
+  display: block;
+  text-align: center;
+  width: 65%;
+  background-color: #ededed;
+  margin-left: 20px;
+}
+
+.search-box {
+  width: 80%;
+  height: 35px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.search-btn {
+  height: 42px;
+  width: 80px;
+}
+
+.results {
+  display: inline-block;
+  text-align: left;
+  width: 90%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: double 3px lightgrey;
+}
+
+.name {
+  font-size: 25px;
+  margin: 10px 10px 10px 20px;
+}
+
+.name .profile-link{
+  color: black;
+}
+
+.name .profile-link:hover {
+  color: lightgrey;
+}
+
+.position {
+  font-size: 20px;
+  margin: 10px 10px 10px 20px;
+}
+
+.about {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  margin: 10px 10px 10px 20px;
+}
+
+/* ---------- End Search Page ---------- */
+
