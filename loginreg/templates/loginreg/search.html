@@ -18,9 +18,9 @@
         <!--Navbar links-->
         <div class="navbar">
             <ul>
-                <li><a href="#">Search</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Messages</a></li>
+                <li><a href="{% url 'loginreg:search' %}">Search</a></li>
+                <li><a href="#{% url 'loginreg:profile' %}">Profile</a></li>
+                <li><a href="{% url 'loginreg:logout' %}">Logout</a></li>
             </ul>
         </div>
     </div>  
