@@ -6,13 +6,14 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:300|PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="../../static/loginreg/css/reset.css">
     <link rel="stylesheet" href="../../static/loginreg/css/style.css">
+    <link rel="stylesheet" href="../../static/loginreg/css/home.css">
   </head>
   <body>
 
     <!--Header section-->
     <div id="header">
         <!--logo image-->
-        <img src="../../static/loginreg/images/sage.png" class="logo">
+        <img src="../../static/loginreg/images/logo.png" class="logo">
 
         <!--Navbar links-->
         <div class="navbar">
@@ -48,27 +49,19 @@
             <!--End Search Box-->
 
             <!--Results-->
+            {% for u in users %}
             <div class="results">
-                <h1 class="name"><a href="#" class="profile-link">Person Name</a></h1>
-                <h1 class="position">Software Engineer at Company</h2>
-                <p class="about">This is where stuff about me would go, such as why I love developing, etc.</p>
+                <h1 class="name"><a href="#" class="profile-link">{{u.first_name}} {{u.last_name}}</a></h1>
+                <h1 class="position">{{u.title}}</h2>
+                <p class="about">{{u.about}}</p>
             </div>
+            {% endfor %}
 
-            <div class="results">
-                <h1 class="name"><a href="#" class="profile-link">Person Name</a></h1>
-                <h1 class="position">Software Engineer at Company</h2>
-                <p class="about">This is where stuff about me would go, such as why I love developing, etc.</p>
-            </div>
             <!--End Results-->
         </div>
     </div>
     <!--End Body Container-->
-    <div id="footer">
-        <ul>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-        </ul>
-    </div>
+
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </html>
