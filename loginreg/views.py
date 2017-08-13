@@ -12,7 +12,7 @@ def register(request):
         userInput=request.POST
         # If MENTOR
         if userInput["userType"] == "mentor":
-            user = User.userManager.registerMentor(request.POST)
+            user = Mentor.mentorManager.registerMentor(request.POST)
             if not user[0]:
                 for i in range(0, len(user[1])):
                     messages.error(request, user[1][i])
@@ -22,7 +22,7 @@ def register(request):
                 return redirect('loginreg:profile')
         # If MENTEE
         if userInput["userType"] == "mentee":
-            user = User.userManager.registerMentee(request.POST)
+            user = Mentee.menteeManager.registerMentee(request.POST)
             if not user[0]:
                 for i in range(0, len(user[1])):
                     messages.error(request, user[1][i])
@@ -37,7 +37,7 @@ def register(request):
 
 # Login function
 def login(request):
-    user = User.userManager.login(request.POST)
+    user = Mentor.mentorManager.login(request.POST)
     if not user[0]:
         for i in range(0, len(user[1])):
             messages.error(request, user[1][i])
