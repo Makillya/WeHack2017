@@ -77,16 +77,23 @@
 
       <!-- Sign Up Form Starts-->
       <div class="signup-form__container">
-        <form class="" action="index.html" method="post">
+        {% if messages %}
+            {% for message in messages %}
+              {{ message|linebreaksbr }}
+            {% endfor %}
+        {% endif %}
+        <form class="" action="{% url 'loginreg:register' %}" method="post">
+          {% csrf_token %}
           <fieldset>
-            <input class="input-box" type="text" name="first" placeholder="First" value="">
-            <input class="input-box" type="text" name="last" placeholder="Last" value="">
-            <input class="input-box" type="text" name="email" placeholder="Email" value="">
-            <input class="input-box" type="text" name="password" placeholder="Password" value="">
+            <input class="input-box" type="text" name="first_name" placeholder="First" >
+            <input class="input-box" type="text" name="last_name" placeholder="Last" >
+            <input class="input-box" type="text" name="email" placeholder="Email" >
+            <input class="input-box" type="password" name="password" placeholder="Password" >
+            <input class="input-box" type="password" name="confirm_password" placeholder="Password" >
             <h2>Who Are You?</h2>
             <p><input type="radio" name="user_type" value="mentor">I am a Mentor</p><br>
             <p><input type="radio" name="user_type" value="mentee">I am a Mentee</p>
-            <button type="button" name="button">Sign Up</button>
+            <button type="submit" >Sign Up</button>
           </fieldset>
         </form>
       </div>
@@ -94,11 +101,12 @@
 
       <!-- Log In Form Starts -->
       <div class="login-form__container">
-        <form class="" action="index.html" method="post">
+        <form class="" action="{% url 'loginreg:login' %}" method="post">
+          {% csrf_token %}
           <fieldset>
-            <input class="input-box" type="text" name="email" placeholder="Email" value="">
-            <input class="input-box" type="text" name="password" placeholder="Password" value="">
-            <button class="input-box" type="button" name="button">Login</button>
+            <input class="input-box" type="text" name="check_email" placeholder="Email" >
+            <input class="input-box" type="password" name="check_password" placeholder="Password" >
+            <button class="input-box" type="submit" >Login</button>
           </fieldset>
         </form>
       </div>
