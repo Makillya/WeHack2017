@@ -39,13 +39,17 @@ def login(request):
 def logout(request):
     request.session['currentUser'] = None
     messages.success(request, "You have been successfully logged out!")
-    return redirect('spring:main')
+    return redirect('loginreg:index')
 
 def profile(request):
+
     return render(request, 'loginreg/profile.html')
 
 def search(request):
-    return render(request, "loginreg/search.html")
+    context={
+    	'users':User.objects.all()
+    }
+    return render(request, "loginreg/search.html", context)
 
 def addUserInfo(request):
     print "****addUserInfo******"
