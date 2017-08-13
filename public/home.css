@@ -46,9 +46,10 @@ div {
 
 .navbar {
     display: inline-block;
-    width: 22%;
+    width: 75%;
     margin-top: 25px;
     font-size: 15px;
+    text-align: right;
 }
 
 ul {

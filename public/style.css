@@ -99,3 +99,105 @@ input.input-box {
   border-bottom: 0;
   padding-top: 13px;
 }
+
+
+/* ---------- Search Page ---------- */
+
+#container {
+  display: flex;
+  margin: 40px 0px 0px 40px;
+}
+
+/* ---- Sidebar ____ */
+#sidebar-container {
+  width: 25%;
+  background-color: #dddddd;
+  margin-right: 20px;
+  outline: double 3px lightgrey;
+  outline-offset: -15px;
+}
+
+.sidebar-title {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.filter-list {
+  width: 50%;
+  margin-left: 5%;
+}
+
+.filter-type {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.filter-type .filter-link {
+  color: black;
+  margin-left: 10px;
+}
+
+.filter-type .filter-link:hover {
+  color: grey;
+}
+
+
+/* ---- Right Body ---- */
+
+#right-container {
+  display: block;
+  text-align: center;
+  width: 65%;
+  background-color: #ededed;
+  margin-left: 20px;
+}
+
+.search-box {
+  width: 80%;
+  height: 35px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.search-btn {
+  height: 42px;
+  width: 80px;
+}
+
+.results {
+  display: inline-block;
+  text-align: left;
+  width: 90%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: double 3px lightgrey;
+}
+
+.name {
+  font-size: 25px;
+  margin: 10px 10px 10px 20px;
+}
+
+.name .profile-link{
+  color: black;
+}
+
+.name .profile-link:hover {
+  color: lightgrey;
+}
+
+.position {
+  font-size: 20px;
+  margin: 10px 10px 10px 20px;
+}
+
+.about {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  margin: 10px 10px 10px 20px;
+}
+
+/* ---------- End Search Page ---------- */
