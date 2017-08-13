@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>We Hack 2017</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!-- This is the signup login modal -->
+    <div id="login-signup">
+
+      <div id="modal__tab-container">
+        <!-- Form Tabs Start-->
+        <div class="modal__tab tab--active" data-tab="" id="modal__left">
+          Log In
+        </div>
+
+        <div class="modal__tab" data-tab="" id="modal__right">
+          Sign Up
+        </div>
+      </div>
+      <!-- Form Tabs End -->
+
+      <!-- Sign Up Form Starts-->
+      <div class="signup-form__container">
+        <form class="" action="index.html" method="post">
+          <fieldset>
+            <input class="input-box" type="text" name="first" placeholder="First" value="">
+            <input class="input-box" type="text" name="last" placeholder="Last" value="">
+            <input class="input-box" type="text" name="email" placeholder="Email" value="">
+            <input class="input-box" type="text" name="password" placeholder="Password" value="">
+            <h2>Who Are You?</h2>
+            <p><input type="radio" name="user-type" value="mentor">I am a Mentor</p><br>
+            <p><input type="radio" name="user-type" value="mentee">I am a Mentee</p>
+            <button type="button" name="button">Sign Up</button>
+          </fieldset>
+        </form>
+      </div>
+      <!-- Sign Up Form Ends -->
+
+      <!-- Log In Form Starts -->
+      <div class="login-form__container">
+        <form class="" action="index.html" method="post">
+          <fieldset>
+            <input class="input-box" type="text" name="email" placeholder="Email" value="">
+            <input class="input-box" type="text" name="password" placeholder="Password" value="">
+            <button class="input-box" type="button" name="button">Login</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <!-- Log In Form Ends -->
+
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+</html>
