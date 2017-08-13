@@ -13,15 +13,9 @@ def addMessage(request,addresseeId):
         message=Message.objects.add(request.POST, creatorId, addresseeId)
     return redirect(request, "messaging:index")
 
-def chatHist(request):
+def chatHist(request, rec):
     currentID = request.session['currentUser'] #get current user id
-    rec = None
-    if currentID == None:
-        return None
-    if request.method == 'POST':
-        userInput=request.POST
-        rec = userInput["addressee"] #get addressee from user
-    if rec == None:
+    if currentID == None or rec == None:
         return None
     data = Message.objects.filter(creator.id=currentID).filter(addressee.id=rec)
     data = data.join(Message.objects.filter(creator.id=rec).filter(addressee.id=currentID)).sort_by('created_at')
