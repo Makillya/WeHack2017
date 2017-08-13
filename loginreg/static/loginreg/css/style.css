@@ -121,7 +121,7 @@ div {
 
 .text-box {
   color: #2D2A2D;
-  width: 75%;
+  width: 50%;
   margin: 10px;
   display: inline-block;
   text-align: left;
@@ -260,10 +260,24 @@ li {
   border-top:2em solid #35395E;
 }
 
+
+.authors li {
+  display: block;
+  /*width: 130px;*/
+}
+
+.authors a:hover {
+  color: #9ACCBB;
+}
+
+.content-container p {
+  text-align: center;
+}
+
 /* Footer Section -----------------*/
 #footer {
   width: 100%;
-  position: absolute;
+  /*position: absolute;*/
   bottom: 0;
   color: #ffffff;
   background-color: #2D2A2D;
