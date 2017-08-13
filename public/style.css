@@ -99,3 +99,17 @@ input.input-box {
   border-bottom: 0;
   padding-top: 13px;
 }
+
+/*User Profile*/
+
+ main form fieldset{
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  border: 1px solid #d0d0d0;
+  resize: none;
+  margin-top: 35px;
+  margin-left: 10px;
+}
