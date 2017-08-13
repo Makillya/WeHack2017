@@ -102,14 +102,14 @@ class UserManager(models.Manager):
 
     def addUserInfo(self, userInput, currentUserId):
         errors=[]
-        if len(userInput["zipcode"]<6):
+        if not userInput["zipcode"]:
             errors.append("Your zipcode has to be at least 5 digit")
         if not errors:
             this_user=self.get(id=currentUserId)
-            this_user["zipcode"]=userInput["zipcode"]
-            this_user["title"]=userInput["title"]
-            this_user["company"]=userInput["company"]
-            this_user["about"]=userInput["about"]
+            this_user.zipcode=userInput["zipcode"]
+            this_user.title=userInput["title"]
+            this_user.company=userInput["company"]
+            this_user.about=userInput["about"]
             this_user.save()
             return True, this_user
         else:
