@@ -182,7 +182,7 @@ li {
 .top-section {
   display: block;
   margin: 0 auto;
-  height: 675px;
+  height: 730px;
 }
 
 .tagline {
@@ -263,7 +263,6 @@ li {
 /* Footer Section -----------------*/
 #footer {
   width: 100%;
-  position: absolute;
   bottom: 0;
   color: #ffffff;
   background-color: #2D2A2D;
@@ -452,4 +451,17 @@ textarea {
 
 .email {
   font-size: 20px;
+}
+
+.authors li {
+  display: block;
+  /*width: 130px;*/
+}
+
+.authors a:hover {
+  color: #9ACCBB;
+}
+
+.content-container p {
+  text-align: center;
 }
